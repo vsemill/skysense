@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #0a192f;
+    background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.05) 1px, transparent 0);
+    background-size: 20px 20px;
+    color: #ccd6f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 650px;
+    background: #172a45;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px -15px rgba(2,12,27,0.7);
+    text-align: center;
+    border: 1px solid #2a4162;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+.spaceapps-logo {
+    width: 180px; 
+    height: auto;
+    filter: invert(1);
+}
+
+h1 { font-size: 2.5em; color: #e6f1ff; margin: 0; }
+p { color: #8892b0; margin-bottom: 30px; }
+
+.map-wrapper {
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 25px;
+    border: 1px solid #2a4162;
+}
+.map-container { height: 300px; width: 100%; }
+
+
+.input-group {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 50px 1fr;
+    gap: 15px;
+    align-items: center;
+}
+.input-group input, .input-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #2a4162;
+    background-color: #0a192f;
+    color: #ccd6f6;
+    border-radius: 6px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+.input-group input::placeholder { color: #8892b0; }
+
+.analyze-btn {
+    padding: 12px 20px;
+    background: linear-gradient(90deg, #ff6b6b, #f06595);
+    color: white;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    height: 100%;
+}
+.analyze-btn:hover { transform: translateY(-2px); box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4); }
+.analyze-btn:disabled { background: #555; cursor: not-allowed; transform: none; box-shadow: none; }
+
+.location-btn {
+    height: 100%;
+    width: 100%;
+    background-color: #2a4162;
+    border: 1px solid #2a4162;
+    color: #ccd6f6;
+    cursor: pointer;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease-in-out;
+}
+.location-btn:hover {
+    background-color: #3b5983;
+}
+.location-btn svg {
+    width: 24px;
+    height: 24px;
+}
+
+.results-card {
+    margin-top: 30px;
+    padding: 25px;
+    background-color: #0a192f;
+    border: 1px solid #2a4162;
+    border-radius: 8px;
+    text-align: left;
+}
+.results-card h3 {
+    margin-top: 0;
+    color: #ccd6f6;
+    font-size: 1.1em;
+    border-bottom: 1px solid #2a4162;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+.results-card .advice {
+    font-size: 1.1em;
+    font-weight: 500;
+    color: #e6f1ff;
+    line-height: 1.6;
+}
+.details {
+    display: flex;
+    justify-content: space-around;
+    font-size: 1em;
+    margin-top: 20px;
+    color: #8892b0;
+}
+.details span { font-weight: 500; color: #ccd6f6; }
+.error { color: #ff6b6b; font-weight: 500; margin-top: 15px; }
