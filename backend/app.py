@@ -12,13 +12,11 @@ METEO_PASS = 'NuRv1197oD3wWV4T3B31'
 def get_activity_advice(activity, temp, rain, wind):
     """Generates a simple recommendation based on weather conditions and activity type."""
     activity_lower = activity.lower()
-    
-    # --- NEW: Check for indoor activities first ---
+
     indoor_keywords = ['indoor', 'chess', 'carrom', 'video game', 'board game', 'inside']
     if any(keyword in activity_lower for keyword in indoor_keywords):
         return "Since your activity is indoors, the outdoor weather won't affect your plans. Have a great time!"
 
-    # --- Logic for outdoor activities (same as before) ---
     if temp is None: return "Cannot give advice due to missing weather data."
 
     advice = f"For your outdoor activity '{activity}', here's the forecast: "
@@ -81,4 +79,5 @@ def analyze_weather():
         return jsonify({'error': 'An error occurred while fetching the forecast.'}), 500
 
 if __name__ == '__main__':
+
     app.run(debug=True, port=5000)
